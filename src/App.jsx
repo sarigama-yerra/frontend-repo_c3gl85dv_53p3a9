@@ -1,26 +1,33 @@
-import { useState } from 'react'
+import React from 'react'
+import NexiloSlider from './components/Slider'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+    <div className="min-h-screen bg-[#F5F3EF]">
+      <header className="absolute top-0 left-0 right-0 z-40">
+        <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+          <div className="text-white/90 font-semibold tracking-[0.12em] uppercase">
+            NEXILO Digital
+          </div>
+          <a
+            href="#contact"
+            className="hidden md:inline-flex items-center px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white transition-colors"
           >
-            Count is {count}
-          </button>
+            Start a Conversation
+          </a>
         </div>
-      </div>
+      </header>
+      <main>
+        <NexiloSlider />
+        <section id="approach" className="bg-[#F5F3EF] text-[#1A2B3D] py-24 md:py-32">
+          <div className="max-w-5xl mx-auto px-6">
+            <h3 className="font-serif text-3xl md:text-5xl tracking-wide leading-tight">Precision built from the floor up.</h3>
+            <p className="mt-6 text-lg leading-relaxed text-[#2F5F5D]">
+              We translate operational nuance into digital systems that protect brand equity and unlock revenue — without taxing your time.
+            </p>
+          </div>
+        </section>
+      </main>
     </div>
   )
 }
